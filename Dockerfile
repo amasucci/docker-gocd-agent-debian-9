@@ -57,6 +57,7 @@ RUN \
   useradd -u ${UID} -g root -d /home/go -m go && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
+                ca-certificates \
                 git \
 		subversion \
 		mercurial \
