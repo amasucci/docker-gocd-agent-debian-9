@@ -56,14 +56,24 @@ RUN \
 # add user to root group for gocd to work on openshift
   useradd -u ${UID} -g root -d /home/go -m go && \
   apt-get update && \
-  apt-get install -y git subversion mercurial openssh-client bash unzip curl locales procps sysvinit-utils coreutils && \
+  apt-get install -y --no-install-recommends \
+                git \
+		subversion \
+		mercurial \
+		openssh-client \
+		bash \
+		unzip \
+		curl \
+		locales \
+		procps \
+		sysvinit-utils \
+		oreutils \
   #From golang##################
-  --no-install-recommends \
 		g++ \
 		gcc \
 		libc6-dev \
 		make \
-		pkg-config \               
+		pkg-config && \               
   ##############################
   apt-get autoclean && \
   echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen && \
