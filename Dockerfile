@@ -67,7 +67,7 @@ RUN \
 		locales \
 		procps \
 		sysvinit-utils \
-		oreutils \
+		coreutils \
   #From golang##################
 		g++ \
 		gcc \
