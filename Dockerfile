@@ -59,6 +59,7 @@ RUN \
   apt-get install -y --no-install-recommends \
                 ca-certificates \
                 git \
+		wget \
 		subversion \
 		mercurial \
 		openssh-client \
